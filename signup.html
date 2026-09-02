@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — Ethiopian Orthodox Tewahedo Community at MNSU</title>
+<link rel="icon" href="logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#F6EEDD;--parchment-dark:#ECE0C7;--maroon:#6E1F24;--maroon-deep:#4E1519;
+  --gold:#B8862E;--gold-light:#D9B563;--ink:#2B2118;--green:#33513F;
+  --font-display:'Cormorant Garamond', Georgia, serif;--font-body:'Inter', Arial, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--font-body);color:var(--ink);background:var(--parchment);line-height:1.7;}
+.container{max-width:1180px;margin:0 auto;padding:0 28px;}
+.tibeb{height:10px;background:repeating-linear-gradient(135deg,var(--maroon) 0 10px,var(--gold) 10px 20px,var(--green) 20px 30px);}
+header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(246,238,221,0.97);border-bottom:1px solid rgba(110,31,36,0.15);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0;}
+.nav-left{display:flex;align-items:center;gap:0.7rem;text-decoration:none;}
+.brand-text{font-family:var(--font-display);font-weight:700;font-size:1.5rem;color:var(--maroon-deep);letter-spacing:0.01em;}
+.church-logo{width:48px;height:48px;object-fit:contain;mix-blend-mode:multiply;}
+.brand-sub{display:block;font-family:var(--font-body);font-size:0.62rem;letter-spacing:0.08em;color:var(--gold);}
+.nav-right{display:flex;align-items:center;gap:1.6rem;}
+.nav-right a{color:var(--ink);font-weight:500;text-decoration:none;font-size:0.98rem;padding:0.4rem 0.2rem;border-bottom:2px solid transparent;transition:border-color 0.2s,color 0.2s;}
+.nav-right a:hover,.nav-right a.active{color:var(--maroon);border-color:var(--gold);}
+.nav-right a.cta{background:var(--maroon);color:#fff;padding:0.55rem 1.2rem;border-radius:3px;border-bottom:none;}
+.nav-right a.cta:hover{background:var(--maroon-deep);color:#fff;}
+.mobile-menu-toggle{display:none;flex-direction:column;background:none;border:none;cursor:pointer;padding:0.5rem;gap:5px;}
+.mobile-menu-toggle span{width:24px;height:2px;background:var(--maroon-deep);border-radius:2px;}
+main{margin-top:83px;}
+
+.signup-wrap{padding:5rem 0 6rem;display:flex;justify-content:center;}
+.signup-card{
+  max-width:560px;width:100%;background:var(--parchment-dark);border-top:4px solid var(--gold);padding:3rem;
+}
+.signup-card h1{font-family:var(--font-display);font-weight:700;font-size:2.4rem;color:var(--maroon-deep);margin-bottom:1rem;line-height:1.1;}
+.signup-card p{color:#3a2e21;margin-bottom:1.6rem;}
+.signup-note{color:var(--green);font-size:0.95rem;font-weight:500;margin-bottom:2rem;}
+.btn-cta{
+  display:inline-flex;align-items:center;gap:0.6rem;background:var(--maroon);color:#fff;font-weight:600;font-size:1.08rem;
+  padding:0.95rem 2rem;border-radius:3px;text-decoration:none;transition:background 0.2s;
+}
+.btn-cta:hover{background:var(--maroon-deep);}
+
+footer{background:#221312;color:#d8c9ab;padding:3.5rem 0 2rem;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem;margin-bottom:2.5rem;}
+.footer-col h3{font-family:var(--font-display);color:var(--gold-light);font-size:1.15rem;margin-bottom:0.8rem;}
+.footer-col p,.footer-col a{color:#c9b892;text-decoration:none;font-size:0.95rem;line-height:1.9;}
+.footer-col a:hover{color:var(--gold-light);}
+.footer-bottom{text-align:center;padding-top:1.8rem;border-top:1px solid rgba(216,201,171,0.15);color:#a3927a;font-size:0.9rem;}
+
+@media (max-width:768px){
+  .mobile-menu-toggle{display:flex;}
+  .nav-right{position:absolute;top:100%;left:0;width:100%;background:var(--parchment);flex-direction:column;align-items:flex-start;gap:0;box-shadow:0 8px 20px rgba(0,0,0,0.08);transform:translateY(-120%);transition:transform 0.25s ease;padding:0.5rem 0;}
+  .nav-right.active{transform:translateY(0);}
+  .nav-right a{width:100%;padding:0.9rem 1.5rem;border-bottom:1px solid rgba(110,31,36,0.08);border-radius:0;}
+  .nav-right a.cta{margin:0.7rem 1.5rem;width:calc(100% - 3rem);text-align:center;}
+  main{margin-top:70px;}
+  .church-logo{width:42px;height:42px;}
+  .signup-card{padding:2rem;}
+  .signup-card h1{font-size:1.9rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="nav-left">
+        <img class="church-logo" src="logo.svg" alt="Ethiopian Orthodox Tewahedo cross">
+        <span>
+          <span class="brand-text">Ethiopian Orthodox Tewahedo Church</span>
+          <span class="brand-sub">ETHIOPIAN ORTHODOX TEWAHEDO COMMUNITY</span>
+        </span>
+      </a>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Meetings</a>
+        <a href="signup.html" class="cta active">Sign Up</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="tibeb"></div>
+
+<main>
+  <section class="signup-wrap">
+    <div class="signup-card">
+      <h1>Sign up with Gibi Gubae</h1>
+      <p>Get added to our contact list so you hear about worship, Bible study, and feast-day gatherings directly. Takes less than a minute.</p>
+      <p class="signup-note">The sign-up form opens in a new tab.</p>
+      <a class="btn-cta" href="https://forms.office.com/Pages/ResponsePage.aspx?id=xscRULQKq0ae9PrnSpIaf8HzK7tgQPdGvfiqSc8FAIdUNDhTUlUzUEIyRUFFOTVFVFZLMEZLTUNKNS4u" target="_blank" rel="noopener">Open Sign Up Form</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Ethiopian Orthodox Tewahedo Church</h3>
+        <p>Ethiopian Orthodox Tewahedo Community<br>Minnesota State University, Mankato</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="events.html">Meetings</a></p>
+        <p><a href="signup.html">Sign Up</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Find Us</h3>
+        <p><a href="https://t.me/MNSUGibigubae" target="_blank" rel="noopener">Telegram</a></p>
+        <p><a href="https://www.instagram.com/ethiopian_orthodox_community_/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Minnesota State University, Mankato · Weekly worship Thursdays, Bible study Wednesdays</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu(){
+  document.querySelector('.nav-right').classList.toggle('active');
+  document.querySelector('.mobile-menu-toggle').classList.toggle('active');
+}
+document.addEventListener('click', function(e){
+  const nav = document.querySelector('nav');
+  const navRight = document.querySelector('.nav-right');
+  if(!nav.contains(e.target) && navRight.classList.contains('active')){
+    navRight.classList.remove('active');
+    document.querySelector('.mobile-menu-toggle').classList.remove('active');
+  }
+});
+document.querySelectorAll('.nav-right a').forEach(link=>{
+  link.addEventListener('click', ()=>{
+    document.querySelector('.nav-right').classList.remove('active');
+    document.querySelector('.mobile-menu-toggle').classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>

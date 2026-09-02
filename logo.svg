@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Ethiopian Orthodox Tewahedo cross</title>
+  <desc id="desc">Maroon circular emblem with a gold cross</desc>
+  <rect width="400" height="400" fill="#f6eedf"/>
+  <circle cx="200" cy="200" r="145" fill="none" stroke="#b8862e" stroke-width="3" stroke-dasharray="2 10"/>
+  <circle cx="200" cy="200" r="119" fill="#762229" stroke="#b8862e" stroke-width="4"/>
+  <path d="M186 83h28v103h103v28H214v103h-28V214H83v-28h103V83z" fill="#d9b563"/>
+  <circle cx="200" cy="83" r="14" fill="#762229" stroke="#d9b563" stroke-width="8"/>
+  <circle cx="317" cy="200" r="14" fill="#762229" stroke="#d9b563" stroke-width="8"/>
+  <circle cx="200" cy="317" r="14" fill="#762229" stroke="#d9b563" stroke-width="8"/>
+  <circle cx="83" cy="200" r="14" fill="#762229" stroke="#d9b563" stroke-width="8"/>
+</svg>

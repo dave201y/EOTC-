@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — Ethiopian Orthodox Tewahedo Community at MNSU</title>
+<link rel="icon" href="logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#F6EEDD;
+  --parchment-dark:#ECE0C7;
+  --maroon:#6E1F24;
+  --maroon-deep:#4E1519;
+  --gold:#B8862E;
+  --gold-light:#D9B563;
+  --ink:#2B2118;
+  --green:#33513F;
+  --font-display:'Cormorant Garamond', Georgia, serif;
+  --font-body:'Inter', Arial, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--parchment);
+  line-height:1.7;
+}
+.container{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+/* tibeb trim: a woven-band divider inspired by Habesha kemis trim patterns */
+.tibeb{height:10px;background:repeating-linear-gradient(135deg,var(--maroon) 0 10px,var(--gold) 10px 20px,var(--green) 20px 30px);}
+
+header{
+  position:fixed;top:0;width:100%;z-index:1000;
+  background:rgba(246,238,221,0.97);
+  border-bottom:1px solid rgba(110,31,36,0.15);
+}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0;}
+.nav-left{display:flex;align-items:center;gap:0.7rem;text-decoration:none;}
+.brand-text{font-family:var(--font-display);font-weight:700;font-size:1.5rem;color:var(--maroon-deep);letter-spacing:0.01em;}
+.church-logo{width:48px;height:48px;object-fit:contain;mix-blend-mode:multiply;}
+.brand-sub{display:block;font-family:var(--font-body);font-size:0.62rem;letter-spacing:0.08em;color:var(--gold);}
+.nav-right{display:flex;align-items:center;gap:1.6rem;}
+.nav-right a{
+  color:var(--ink);font-weight:500;text-decoration:none;font-size:0.98rem;
+  padding:0.4rem 0.2rem;border-bottom:2px solid transparent;transition:border-color 0.2s,color 0.2s;
+}
+.nav-right a:hover,.nav-right a.active{color:var(--maroon);border-color:var(--gold);}
+.nav-right a.cta{
+  background:var(--maroon);color:#fff;padding:0.55rem 1.2rem;border-radius:3px;border-bottom:none;
+}
+.nav-right a.cta:hover{background:var(--maroon-deep);color:#fff;}
+.mobile-menu-toggle{display:none;flex-direction:column;background:none;border:none;cursor:pointer;padding:0.5rem;gap:5px;}
+.mobile-menu-toggle span{width:24px;height:2px;background:var(--maroon-deep);border-radius:2px;}
+
+main{margin-top:83px;}
+
+/* hero */
+.hero{padding:5rem 0 4rem;}
+.hero .container{display:flex;align-items:center;gap:3.5rem;}
+.hero-text{flex:1.1;}
+.eyebrow-line{display:flex;align-items:center;gap:0.7rem;margin-bottom:1.1rem;color:var(--green);font-family:var(--font-body);font-size:0.95rem;font-weight:500;}
+.eyebrow-line svg{flex-shrink:0;}
+h1{
+  font-family:var(--font-display);font-weight:700;font-size:3.3rem;line-height:1.08;
+  color:var(--maroon-deep);margin-bottom:1.3rem;
+}
+.lede{font-size:1.15rem;color:#3a2e21;max-width:52ch;margin-bottom:2rem;}
+.hero-links{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:0.55rem;
+  padding:0.85rem 1.6rem;border-radius:3px;text-decoration:none;font-weight:600;font-size:1rem;
+  border:1.5px solid transparent;transition:background 0.2s,color 0.2s,border-color 0.2s;
+}
+.btn-maroon{background:var(--maroon);color:#fff;}
+.btn-maroon:hover{background:var(--maroon-deep);}
+.btn-outline{background:transparent;border-color:var(--maroon);color:var(--maroon-deep);}
+.btn-outline:hover{background:var(--maroon);color:#fff;}
+
+.hero-art{flex:0.9;display:flex;justify-content:center;}
+.cross-roundel{width:290px;height:290px;}
+
+/* intro / what is oriental orthodoxy */
+.intro{padding:4.5rem 0;background:var(--parchment-dark);}
+.intro-head{max-width:64ch;margin-bottom:2.6rem;}
+.intro-head h2{font-family:var(--font-display);font-weight:700;font-size:2.15rem;color:var(--maroon-deep);margin-bottom:0.9rem;}
+.intro-head p{color:#3a2e21;font-size:1.05rem;}
+.pillars{display:flex;gap:2.2rem;flex-wrap:wrap;}
+.pillar{flex:1 1 260px;border-top:3px solid var(--gold);padding-top:1.1rem;}
+.pillar h3{font-family:var(--font-display);font-weight:600;font-size:1.35rem;color:var(--maroon);margin-bottom:0.6rem;}
+.pillar p{font-size:0.98rem;color:#4a3b2b;}
+
+/* gather / meeting times */
+.gather{padding:4.5rem 0;}
+.gather .container{display:flex;gap:3rem;flex-wrap:wrap;align-items:flex-start;}
+.gather-copy{flex:1 1 320px;}
+.gather-copy h2{font-family:var(--font-display);font-weight:700;font-size:2.1rem;color:var(--maroon-deep);margin-bottom:0.9rem;}
+.gather-copy p{color:#3a2e21;max-width:48ch;}
+footer{background:#221312;color:#d8c9ab;padding:3.5rem 0 2rem;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem;margin-bottom:2.5rem;}
+.footer-col h3{font-family:var(--font-display);color:var(--gold-light);font-size:1.15rem;margin-bottom:0.8rem;}
+.footer-col p,.footer-col a{color:#c9b892;text-decoration:none;font-size:0.95rem;line-height:1.9;}
+.footer-col a:hover{color:var(--gold-light);}
+.footer-bottom{text-align:center;padding-top:1.8rem;border-top:1px solid rgba(216,201,171,0.15);color:#a3927a;font-size:0.9rem;}
+
+@media (max-width:900px){
+  .hero .container{flex-direction:column;text-align:left;}
+  .hero-art{order:-1;}
+  .cross-roundel{width:200px;height:200px;}
+}
+@media (max-width:768px){
+  .mobile-menu-toggle{display:flex;}
+  .nav-right{
+    position:absolute;top:100%;left:0;width:100%;background:var(--parchment);
+    flex-direction:column;align-items:flex-start;gap:0;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transform:translateY(-120%);transition:transform 0.25s ease;padding:0.5rem 0;
+  }
+  .nav-right.active{transform:translateY(0);}
+  .nav-right a{width:100%;padding:0.9rem 1.5rem;border-bottom:1px solid rgba(110,31,36,0.08);border-radius:0;}
+  .nav-right a.cta{margin:0.7rem 1.5rem;width:calc(100% - 3rem);text-align:center;}
+  main{margin-top:70px;}
+  .church-logo{width:42px;height:42px;}
+  h1{font-size:2.3rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="nav-left">
+          <img class="church-logo" src="logo.svg" alt="Ethiopian Orthodox Tewahedo cross">
+        <span>
+          <span class="brand-text">Ethiopian Orthodox Tewahedo Church</span>
+          <span class="brand-sub">ETHIOPIAN ORTHODOX TEWAHEDO COMMUNITY</span>
+        </span>
+      </a>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+      <div class="nav-right">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Meetings</a>
+        <a href="signup.html" class="cta">Sign Up</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="tibeb"></div>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <div class="eyebrow-line">
+          <svg width="20" height="20" viewBox="0 0 60 60"><rect x="26" y="10" width="8" height="40" rx="2" fill="#33513F"/><rect x="10" y="26" width="40" height="8" rx="2" fill="#33513F"/></svg>
+          Ethiopian Orthodox Tewahedo Community · MNSU Mankato
+        </div>
+        <h1>Welcome to Gibi Gubae</h1>
+        <p class="lede">We're a student community carrying one of the oldest living Christian traditions in the world onto MNSU's campus — Ge'ez chant, incense, fasting, and fellowship, open to anyone curious about the Oriental Orthodox faith, whether you grew up in it or have never heard of it before.</p>
+        <div class="hero-links">
+          <a class="btn btn-maroon" href="https://t.me/MNSUGibigubae" target="_blank" rel="noopener">Join our Telegram</a>
+          <a class="btn btn-outline" href="https://www.instagram.com/ethiopian_orthodox_community_/" target="_blank" rel="noopener">Follow on Instagram</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg class="cross-roundel" viewBox="0 0 300 300">
+          <circle cx="150" cy="150" r="140" fill="none" stroke="#B8862E" stroke-width="2" stroke-dasharray="1 9" stroke-linecap="round"/>
+          <circle cx="150" cy="150" r="120" fill="#6E1F24"/>
+          <circle cx="150" cy="150" r="120" fill="none" stroke="#B8862E" stroke-width="3"/>
+          <g fill="#D9B563">
+            <rect x="136" y="45" width="28" height="210" rx="6"/>
+            <rect x="45" y="136" width="210" height="28" rx="6"/>
+            <circle cx="150" cy="45" r="17"/>
+            <circle cx="150" cy="255" r="17"/>
+            <circle cx="45" cy="150" r="17"/>
+            <circle cx="255" cy="150" r="17"/>
+          </g>
+          <g fill="#6E1F24">
+            <circle cx="150" cy="45" r="6"/>
+            <circle cx="150" cy="255" r="6"/>
+            <circle cx="45" cy="150" r="6"/>
+            <circle cx="255" cy="150" r="6"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="container">
+      <div class="intro-head">
+        <h2>What is Oriental Orthodoxy?</h2>
+        <p>Oriental Orthodoxy is a family of ancient Christian churches — Ethiopian, Eritrean, Coptic, Armenian, Syriac, and Malankara among them — that trace their roots to the earliest centuries of the Church. The Ethiopian Orthodox Tewahedo Church is one of the oldest, with Christianity reaching Ethiopia in the 4th century.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Ancient and apostolic</h3>
+          <p>Our worship, feasts, and church calendar carry forward practice that has continued, largely unbroken, for over 1,600 years.</p>
+        </div>
+        <div class="pillar">
+          <h3>Ge'ez liturgy</h3>
+          <p>Services are chanted in Ge'ez, the church's historic liturgical language, alongside Amharic and English so newcomers can follow along.</p>
+        </div>
+        <div class="pillar">
+          <h3>A life of fasting and feast</h3>
+          <p>Our calendar moves through seasons of fasting and celebration together — a rhythm that shapes community life, not just individual devotion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gather">
+    <div class="container">
+      <div class="gather-copy">
+        <h2>Come as you are</h2>
+        <p>You don't need to know the prayers, the language, or the customs to come through the door. Most of us are still learning too. We gather twice a week during the semester — no RSVP needed.</p>
+        <a class="btn btn-maroon" href="events.html" style="margin-top:0.6rem;">See when we meet</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Ethiopian Orthodox Tewahedo Church</h3>
+        <p>Ethiopian Orthodox Tewahedo Community<br>Minnesota State University, Mankato</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="events.html">Meetings</a></p>
+        <p><a href="signup.html">Sign Up</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Find Us</h3>
+        <p><a href="https://t.me/MNSUGibigubae" target="_blank" rel="noopener">Telegram</a></p>
+        <p><a href="https://www.instagram.com/ethiopian_orthodox_community_/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Minnesota State University, Mankato · Weekly worship Thursdays, Bible study Wednesdays</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu(){
+  document.querySelector('.nav-right').classList.toggle('active');
+  document.querySelector('.mobile-menu-toggle').classList.toggle('active');
+}
+document.addEventListener('click', function(e){
+  const nav = document.querySelector('nav');
+  const navRight = document.querySelector('.nav-right');
+  if(!nav.contains(e.target) && navRight.classList.contains('active')){
+    navRight.classList.remove('active');
+    document.querySelector('.mobile-menu-toggle').classList.remove('active');
+  }
+});
+document.querySelectorAll('.nav-right a').forEach(link=>{
+  link.addEventListener('click', ()=>{
+    document.querySelector('.nav-right').classList.remove('active');
+    document.querySelector('.mobile-menu-toggle').classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>
